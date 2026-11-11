@@ -1,0 +1,147 @@
+.history-hero {
+  position: relative;
+  min-height: 340px;
+  overflow: hidden;
+  isolation: isolate;
+  display: grid;
+  align-items: center;
+  color: white;
+  background: #384759;
+}
+
+.history-hero > img,
+.history-hero-shade {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.history-hero > img {
+  object-fit: cover;
+  object-position: center 57%;
+}
+
+.history-hero-shade {
+  z-index: -1;
+  background: linear-gradient(90deg, rgb(9 29 47 / 86%), rgb(9 29 47 / 45%));
+}
+
+.history-hero-copy {
+  padding-block: 62px;
+}
+
+.history-hero .eyebrow {
+  color: #e8c66f;
+}
+
+.history-hero h1 {
+  margin: 0;
+  font: 600 clamp(2.6rem, 6vw, 4.6rem)/1.12 var(--serif);
+}
+
+.history-hero-copy > p:last-child {
+  margin: 17px 0 0;
+  color: #e5ebef;
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.history-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(270px, 0.75fr);
+  gap: 42px 58px;
+  align-items: center;
+  padding-block: 70px;
+}
+
+.history-intro .page-heading {
+  max-width: 520px;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+}
+
+.history-intro .lead-copy {
+  max-width: 650px;
+  margin: 20px 0 0;
+}
+
+.history-milestone {
+  display: flex;
+  gap: 17px;
+  padding: 26px;
+  border: 1px solid #e6e1d5;
+  background: #f3efe5;
+}
+
+.milestone-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--navy);
+  background: #e7dcc1;
+}
+
+.milestone-label {
+  margin: 1px 0 8px;
+  color: #a77c20;
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.history-milestone h3 {
+  margin: 0 0 9px;
+  color: var(--navy);
+  font: 600 1.2rem/1.4 var(--serif);
+}
+
+.history-milestone div > p:last-child {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+.history-verse {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 30px;
+  color: white;
+  background: var(--navy);
+  text-align: center;
+}
+
+.history-verse > svg {
+  color: #e8c66f;
+}
+
+.history-verse blockquote {
+  margin: 14px 0 8px;
+  font: italic 1.4rem/1.5 var(--serif);
+}
+
+.history-verse figcaption {
+  color: #e8c66f;
+  font-size: 0.84rem;
+}
+
+@media (max-width: 760px) {
+  .history-body {
+    grid-template-columns: 1fr;
+    gap: 27px;
+    padding-block: 48px;
+  }
+
+  .history-verse {
+    grid-column: auto;
+  }
+
+  .history-hero-copy {
+    width: calc(100% - 36px);
+  }
+}

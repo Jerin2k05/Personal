@@ -1,0 +1,267 @@
+.home-hero {
+  position: relative;
+  min-height: 520px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  isolation: isolate;
+  color: white;
+  background: #1b3852;
+}
+
+.hero-background,
+.hero-overlay {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-background {
+  object-fit: cover;
+  object-position: center 52%;
+}
+
+.hero-overlay {
+  z-index: -1;
+  background: linear-gradient(90deg, rgb(8 28 47 / 83%) 0%, rgb(8 28 47 / 59%) 49%, rgb(8 28 47 / 15%) 100%);
+}
+
+.hero-content {
+  width: min(1120px, calc(100% - 48px));
+  margin-inline: auto;
+  padding-block: 70px;
+  text-align: left;
+}
+
+.hero-kicker {
+  margin: 0 0 16px;
+  color: #f0d48f;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.hero-content h1 {
+  margin: 0;
+  font: 600 clamp(3.35rem, 8vw, 6rem)/1.02 var(--serif);
+  letter-spacing: -0.035em;
+}
+
+.hero-ministry {
+  margin: 8px 0 16px;
+  color: #f0cd72;
+  font: 500 clamp(1.55rem, 3.2vw, 2.2rem) var(--serif);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.hero-tagline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 24px;
+  color: #edf2f5;
+  font-size: 0.88rem;
+}
+
+.hero-tagline span {
+  color: #f0cd72;
+}
+
+.hero-verse {
+  margin: 0;
+  font: italic 1.15rem/1.75 var(--serif);
+}
+
+.hero-reference {
+  margin: 7px 0 25px;
+  color: #e4c675;
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.hero-button {
+  min-height: 50px;
+}
+
+.hero-cross {
+  position: absolute;
+  z-index: -1;
+  right: 12%;
+  bottom: 17%;
+  width: 11px;
+  height: 116px;
+  border-radius: 2px;
+  background: rgb(255 246 216 / 75%);
+  box-shadow: 0 0 34px 14px rgb(255 221 135 / 38%);
+}
+
+.hero-cross::before {
+  position: absolute;
+  top: 29px;
+  left: -26px;
+  width: 63px;
+  height: 9px;
+  border-radius: 2px;
+  background: inherit;
+  content: '';
+}
+
+.feature-section {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  padding-block: 42px;
+}
+
+.feature-card {
+  padding: 8px 28px;
+  text-align: center;
+}
+
+.feature-card + .feature-card {
+  border-left: 1px solid #e1e5e9;
+}
+
+.feature-icon {
+  display: grid;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 12px;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--navy);
+  background: #f0e8d5;
+}
+
+.feature-card h2 {
+  margin: 0 0 8px;
+  color: var(--navy);
+  font: 600 1.2rem var(--serif);
+}
+
+.feature-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+.prayer-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  min-height: 350px;
+  background: var(--navy);
+}
+
+/* .prayer-image-wrap {
+  min-height: 350px;
+  background: #293d51;
+} */
+
+.prayer-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 350px;
+  object-fit: cover;
+}
+
+.prayer-content {
+  align-self: center;
+  max-width: 600px;
+  padding: 48px clamp(32px, 7vw, 100px);
+  color: white;
+}
+
+.prayer-content .eyebrow {
+  color: #e5c46f;
+}
+
+.prayer-content h2 {
+  margin: 0 0 16px;
+  font: 600 clamp(1.8rem, 3.2vw, 2.6rem)/1.2 var(--serif);
+}
+
+.prayer-content > p:not(.eyebrow) {
+  max-width: 470px;
+  margin: 0 0 24px;
+  color: #d3dee6;
+  line-height: 1.8;
+}
+
+.learn-button {
+  color: white;
+  border-color: rgb(255 255 255 / 35%);
+  background: transparent;
+}
+
+.learn-button:hover {
+  color: var(--navy-deep);
+  border-color: white;
+  background: white;
+}
+
+@media (max-width: 760px) {
+  .home-hero {
+    min-height: 470px;
+  }
+
+  .hero-content {
+    width: calc(100% - 40px);
+    padding-block: 60px;
+  }
+
+  .hero-cross {
+    right: 11%;
+    bottom: 12%;
+    opacity: 0.6;
+  }
+
+  .feature-section {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-block: 24px;
+    row-gap: 22px;
+  }
+
+  .feature-card {
+    padding: 10px 15px;
+  }
+
+  .feature-card:nth-child(3) {
+    border-left: 0;
+  }
+
+  .prayer-section {
+    grid-template-columns: 1fr;
+  }
+
+  /* .prayer-image-wrap,
+  .prayer-image {
+    min-height: 270px;
+    max-height: 340px;
+  } */
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 3.1rem;
+  }
+
+  .hero-tagline {
+    max-width: 290px;
+    font-size: 0.78rem;
+  }
+
+  .hero-verse {
+    max-width: 340px;
+    font-size: 1rem;
+  }
+
+  .hero-cross {
+    right: 9%;
+    opacity: 0.35;
+  }
+}

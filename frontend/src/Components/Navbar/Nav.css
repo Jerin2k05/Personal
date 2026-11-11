@@ -1,0 +1,152 @@
+.navbar {
+  position: sticky;
+  z-index: 20;
+  top: 0;
+  color: #fff;
+  background: var(--navy);
+  box-shadow: 0 2px 14px rgb(3 23 40 / 14%);
+}
+
+.nav-inner {
+  width: min(var(--content-width), calc(100% - 48px));
+  min-height: 82px;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.brand {
+  display: inline-flex;
+  min-width: 0;
+  align-items: center;
+  gap: 12px;
+  padding-block: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.brand-logo {
+  width: 58px;
+  height: 58px;
+  flex: 0 0 58px;
+  border-radius: 50%;
+  background: white;
+  object-fit: cover;
+}
+
+.brand-copy {
+  display: grid;
+  line-height: 1.15;
+}
+
+.brand-copy strong {
+  font: 600 1rem var(--serif);
+}
+
+.brand-copy > span {
+  margin-top: 4px;
+  color: var(--gold);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 3vw, 36px);
+}
+
+.nav-link {
+  position: relative;
+  display: inline-flex;
+  min-height: 82px;
+  align-items: center;
+  color: #e7edf2;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+.nav-link::after {
+  position: absolute;
+  right: 0;
+  bottom: 17px;
+  left: 0;
+  height: 2px;
+  background: var(--gold);
+  content: '';
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 150ms ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #f0cf79;
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+.menu-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(255 255 255 / 28%);
+  border-radius: 4px;
+  color: white;
+  background: transparent;
+  cursor: pointer;
+}
+
+@media (max-width: 720px) {
+  .nav-inner {
+    width: calc(100% - 36px);
+    min-height: 76px;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .brand-logo {
+    width: 52px;
+    height: 52px;
+    flex-basis: 52px;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .nav-menu {
+    display: none;
+    width: 100%;
+    padding: 2px 0 14px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .nav-menu.is-open {
+    display: flex;
+  }
+
+  .nav-link {
+    min-height: 46px;
+    padding-inline: 8px;
+  }
+
+  .nav-link::after {
+    right: auto;
+    bottom: 5px;
+    width: 42px;
+  }
+}

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#f2d89b"/>
+      <stop offset=".48" stop-color="#b77e42"/>
+      <stop offset="1" stop-color="#23384a"/>
+    </linearGradient>
+    <linearGradient id="page" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#fffdf3"/>
+      <stop offset="1" stop-color="#e6d9bb"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="700" fill="url(#bg)"/>
+  <circle cx="760" cy="145" r="95" fill="#ffe5a0" opacity=".66"/>
+  <path d="M0 464c151-90 275-36 415 23 162 69 319 75 585-8v221H0V464Z" fill="#24394d" opacity=".82"/>
+  <path d="M85 571c151-70 280-70 415-21 139-54 268-53 415 21l-58 72c-143-60-246-51-357-6-112-45-220-54-357 6l-58-72Z" fill="#5b3e2e"/>
+  <path d="M500 548c-122-68-245-77-367-29v119c141-49 256-39 367 15V548Z" fill="url(#page)" stroke="#d4c39f" stroke-width="8"/>
+  <path d="M500 548c122-68 245-77 367-29v119c-141-49-256-39-367 15V548Z" fill="url(#page)" stroke="#d4c39f" stroke-width="8"/>
+  <path d="M500 550v103" stroke="#b8a47f" stroke-width="7"/>
+  <g stroke="#c6b898" stroke-width="4" opacity=".72">
+    <path d="M180 550c91-29 176-20 267 15M180 573c91-29 176-20 267 15M180 596c91-29 176-20 267 15"/>
+    <path d="M553 565c91-35 176-44 267-15M553 588c91-35 176-44 267-15M553 611c91-35 176-44 267-15"/>
+  </g>
+  <path d="M499 116v244M420 194h158" stroke="#fff4d4" stroke-width="18" stroke-linecap="round" opacity=".82"/>
+</svg>

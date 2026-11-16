@@ -35,7 +35,7 @@ function Contact() {
       <section className="contact-banner">
         <div className="page-width">
           <p className="eyebrow">We would love to hear from you</p>
-          <h1 className="page-heading">Get in touch</h1>
+          <h1 className="page-heading">Get in Touch</h1>
           <p>Connect with Arise &amp; Shine Ministries or follow along online.</p>
         </div>
       </section>

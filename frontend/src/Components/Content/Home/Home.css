@@ -1,6 +1,6 @@
 .home-hero {
   position: relative;
-  min-height: 520px;
+  min-height: 590px;
   overflow: hidden;
   display: grid;
   place-items: center;
@@ -25,66 +25,90 @@
 
 .hero-overlay {
   z-index: -1;
-  background: linear-gradient(90deg, rgb(8 28 47 / 83%) 0%, rgb(8 28 47 / 59%) 49%, rgb(8 28 47 / 15%) 100%);
+  background:
+    linear-gradient(90deg, rgb(8 28 47 / 89%) 0%, rgb(8 28 47 / 69%) 45%, rgb(8 28 47 / 16%) 100%),
+    linear-gradient(0deg, rgb(8 28 47 / 22%), transparent 50%);
 }
 
 .hero-content {
   width: min(1120px, calc(100% - 48px));
   margin-inline: auto;
-  padding-block: 70px;
+  padding-block: 82px;
   text-align: left;
 }
 
 .hero-kicker {
-  margin: 0 0 16px;
-  color: #f0d48f;
-  font-size: 0.78rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 20px;
+  color: #f4d98e;
+  font-size: 0.73rem;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
+}
+
+.hero-kicker::before {
+  width: 34px;
+  height: 1px;
+  background: currentColor;
+  content: '';
 }
 
 .hero-content h1 {
   margin: 0;
-  font: 600 clamp(3.35rem, 8vw, 6rem)/1.02 var(--serif);
-  letter-spacing: -0.035em;
+  font: 600 clamp(3.5rem, 8.3vw, 6.4rem)/0.98 var(--serif);
+  letter-spacing: -0.045em;
+  text-shadow: 0 3px 24px rgb(0 0 0 / 16%);
 }
 
 .hero-ministry {
-  margin: 8px 0 16px;
-  color: #f0cd72;
-  font: 500 clamp(1.55rem, 3.2vw, 2.2rem) var(--serif);
-  letter-spacing: 0.14em;
+  margin: 12px 0 20px;
+  color: #f1d083;
+  font: 500 clamp(1.15rem, 2.3vw, 1.55rem)/1.4 'DM Sans', 'Segoe UI', sans-serif;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
 }
 
 .hero-tagline {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin: 0 0 24px;
-  color: #edf2f5;
-  font-size: 0.88rem;
+  gap: 10px;
+  margin: 0 0 27px;
+  color: #f3f5f6;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.045em;
 }
 
 .hero-tagline span {
-  color: #f0cd72;
+  color: #f1d083;
 }
 
 .hero-verse {
+  max-width: 610px;
   margin: 0;
-  font: italic 1.15rem/1.75 var(--serif);
+  padding-left: 17px;
+  border-left: 2px solid #e8c66f;
+  color: #f5f4ed;
+  font: italic 1.13rem/1.7 var(--serif);
+  text-wrap: pretty;
 }
 
 .hero-reference {
-  margin: 7px 0 25px;
-  color: #e4c675;
-  font-size: 0.86rem;
+  margin: 10px 0 26px 19px;
+  color: #f0d48f;
+  font-size: 0.76rem;
   font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .hero-button {
   min-height: 50px;
+  padding-inline: 24px;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 18%);
 }
 
 .hero-cross {
@@ -206,12 +230,12 @@
 
 @media (max-width: 760px) {
   .home-hero {
-    min-height: 470px;
+    min-height: 510px;
   }
 
   .hero-content {
     width: calc(100% - 40px);
-    padding-block: 60px;
+    padding-block: 68px;
   }
 
   .hero-cross {
@@ -246,18 +270,36 @@
 }
 
 @media (max-width: 480px) {
+  .home-hero {
+    min-height: 490px;
+  }
+
   .hero-content h1 {
-    font-size: 3.1rem;
+    font-size: clamp(2.85rem, 13vw, 3.5rem);
+    letter-spacing: -0.04em;
+  }
+
+  .hero-kicker {
+    gap: 9px;
+    font-size: 0.66rem;
+    letter-spacing: 0.15em;
+  }
+
+  .hero-ministry {
+    margin-block: 10px 17px;
+    font-size: 1rem;
+    letter-spacing: 0.25em;
   }
 
   .hero-tagline {
     max-width: 290px;
-    font-size: 0.78rem;
+    gap: 7px;
+    font-size: 0.7rem;
   }
 
   .hero-verse {
     max-width: 340px;
-    font-size: 1rem;
+    font-size: 1.02rem;
   }
 
   .hero-cross {

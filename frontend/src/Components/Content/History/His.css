@@ -1,11 +1,11 @@
 .history-hero {
   position: relative;
-  min-height: 340px;
+  min-height: 390px;
   overflow: hidden;
   isolation: isolate;
   display: grid;
   align-items: center;
-  color: white;
+  color: #fff;
   background: #384759;
 }
 
@@ -25,20 +25,27 @@
 
 .history-hero-shade {
   z-index: -1;
-  background: linear-gradient(90deg, rgb(9 29 47 / 86%), rgb(9 29 47 / 45%));
+  background: linear-gradient(90deg, rgb(9 29 47 / 86%), rgb(9 29 47 / 42%));
 }
 
 .history-hero-copy {
-  padding-block: 62px;
+  padding-block: 66px;
 }
 
-.history-hero .eyebrow {
+.history-hero .eyebrow,
+.history-closing .eyebrow {
   color: #e8c66f;
 }
 
 .history-hero h1 {
-  margin: 0;
+  margin: 7px 0 0;
   font: 600 clamp(2.6rem, 6vw, 4.6rem)/1.12 var(--serif);
+}
+
+.history-tamil {
+  margin: 0;
+  color: #f2d98f;
+  font-size: clamp(1.2rem, 2.8vw, 1.65rem);
 }
 
 .history-hero-copy > p:last-child {
@@ -48,100 +55,322 @@
   line-height: 1.7;
 }
 
-.history-body {
+.history-content {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(270px, 0.75fr);
-  gap: 42px 58px;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  gap: 58px 64px;
   align-items: center;
-  padding-block: 70px;
+  padding-block: 76px;
 }
 
-.history-intro .page-heading {
-  max-width: 520px;
+.history-intro .page-heading,
+.history-section .page-heading,
+.history-media .page-heading {
+  margin: 0;
   font-size: clamp(2rem, 4vw, 2.8rem);
 }
 
-.history-intro .lead-copy {
-  max-width: 650px;
-  margin: 20px 0 0;
+.history-intro > p:last-child,
+.history-section-heading > p:last-child,
+.history-online > div > p:not(.eyebrow),
+.history-media > div > p:not(.eyebrow),
+.history-closing > p:not(.eyebrow) {
+  margin: 17px 0 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.history-founding {
+  padding: 27px;
+  border: 1px solid #e6e1d5;
+  background: #f5f1e8;
+}
+
+.history-founding > svg {
+  color: #a77c20;
+}
+
+.history-founding-date {
+  margin: 15px 0 7px;
+  color: #a77c20;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.history-founding h3 {
+  margin: 0;
+  color: var(--navy);
+  font: 600 1.45rem/1.35 var(--serif);
+}
+
+.history-founding > p:last-of-type {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.history-founding-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 21px;
+  padding-top: 17px;
+  border-top: 1px solid #dfd7c6;
+}
+
+.history-founding-stats span {
+  display: grid;
+  gap: 4px;
+  color: var(--muted);
+  font-size: 0.76rem;
+  line-height: 1.45;
+}
+
+.history-founding-stats strong {
+  color: var(--navy);
+  font: 600 1.5rem/1 var(--serif);
+}
+
+.history-section,
+.history-media,
+.history-closing,
+.history-verse {
+  grid-column: 1 / -1;
+}
+
+.history-section-heading {
+  max-width: 700px;
+  margin-bottom: 30px;
+}
+
+.history-section-heading > p:last-child {
+  max-width: 600px;
+}
+
+.history-milestones {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 17px;
 }
 
 .history-milestone {
   display: flex;
   gap: 17px;
-  padding: 26px;
-  border: 1px solid #e6e1d5;
-  background: #f3efe5;
+  padding: 24px;
+  border: 1px solid #e8e4dc;
+  background: #fff;
 }
 
-.milestone-icon {
+.milestone-icon,
+.history-feature-icon {
   display: grid;
-  width: 42px;
-  height: 42px;
-  flex: 0 0 42px;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
   place-items: center;
   border-radius: 50%;
   color: var(--navy);
-  background: #e7dcc1;
-}
-
-.milestone-label {
-  margin: 1px 0 8px;
-  color: #a77c20;
-  font-size: 0.73rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  background: #f1ead8;
 }
 
 .history-milestone h3 {
-  margin: 0 0 9px;
+  margin: 1px 0 8px;
   color: var(--navy);
   font: 600 1.2rem/1.4 var(--serif);
 }
 
-.history-milestone div > p:last-child {
+.history-milestone p,
+.history-prayer-note p {
   margin: 0;
   color: var(--muted);
-  font-size: 0.88rem;
-  line-height: 1.65;
+  font-size: 0.9rem;
+  line-height: 1.7;
 }
 
-.history-verse {
-  grid-column: 1 / -1;
-  margin: 0;
+.history-prayer-note {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 18px;
+  padding: 19px 22px;
+  color: #a77c20;
+  background: #f8f6f0;
+}
+
+.history-prayer-note svg {
+  flex: 0 0 auto;
+}
+
+.history-online,
+.history-media {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+}
+
+.history-online {
+  padding-top: 7px;
+}
+
+.history-online .eyebrow,
+.history-media .eyebrow {
+  margin: 0 0 9px;
+}
+
+.history-online > div > p:not(.eyebrow) + p {
+  margin-top: 12px;
+}
+
+.history-media {
+  align-items: center;
   padding: 30px;
-  color: white;
+  border: 1px solid #e6e1d5;
+  background: #f5f1e8;
+}
+
+.history-media .history-feature-icon {
+  background: #e7dcc1;
+}
+
+.history-song-count {
+  display: grid;
+  flex: 0 0 auto;
+  gap: 5px;
+  justify-items: center;
+  margin-left: auto;
+  padding-left: 26px;
+  color: #a77c20;
+  text-align: center;
+}
+
+.history-song-count strong {
+  color: var(--navy);
+  font: 600 2.7rem/1 var(--serif);
+}
+
+.history-song-count span {
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.history-closing {
+  padding: 38px;
+  color: #fff;
   background: var(--navy);
   text-align: center;
 }
 
+.history-closing h2 {
+  max-width: 680px;
+  margin: 0 auto;
+  font: 600 clamp(1.8rem, 3.8vw, 2.6rem)/1.25 var(--serif);
+}
+
+.history-closing > p:not(.eyebrow) {
+  max-width: 760px;
+  margin-inline: auto;
+  color: #e0e7eb;
+}
+
+.history-closing .history-glory {
+  margin-top: 25px;
+  color: #f2d98f;
+  font-weight: 700;
+}
+
+.history-verse {
+  margin: 0;
+  padding: 30px;
+  color: var(--navy);
+  background: #f5f1e8;
+  text-align: center;
+}
+
 .history-verse > svg {
-  color: #e8c66f;
+  color: #a77c20;
 }
 
 .history-verse blockquote {
-  margin: 14px 0 8px;
+  max-width: 760px;
+  margin: 14px auto 8px;
   font: italic 1.4rem/1.5 var(--serif);
 }
 
 .history-verse figcaption {
-  color: #e8c66f;
+  color: #a77c20;
   font-size: 0.84rem;
+  font-weight: 700;
 }
 
 @media (max-width: 760px) {
-  .history-body {
-    grid-template-columns: 1fr;
-    gap: 27px;
-    padding-block: 48px;
-  }
-
-  .history-verse {
-    grid-column: auto;
+  .history-hero {
+    min-height: 340px;
   }
 
   .history-hero-copy {
     width: calc(100% - 36px);
+  }
+
+  .history-content {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    padding-block: 50px;
+  }
+
+  .history-section,
+  .history-media,
+  .history-closing,
+  .history-verse {
+    grid-column: auto;
+  }
+
+  .history-milestones {
+    grid-template-columns: 1fr;
+  }
+
+  .history-online {
+    padding-top: 0;
+  }
+
+  .history-media {
+    flex-wrap: wrap;
+    padding: 24px;
+  }
+
+  .history-media > div {
+    flex: 1 1 calc(100% - 70px);
+  }
+
+  .history-song-count {
+    width: 100%;
+    margin: 4px 0 0;
+    padding: 18px 0 0;
+    border-top: 1px solid #dfd7c6;
+  }
+
+  .history-closing {
+    padding: 30px 22px;
+  }
+
+  .history-verse {
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .history-founding-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .history-milestone {
+    padding: 20px;
+  }
+
+  .history-online {
+    flex-direction: column;
+    gap: 14px;
   }
 }

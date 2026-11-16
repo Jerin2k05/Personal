@@ -40,7 +40,7 @@ function Home() {
         <div className="hero-content">
           <p className="hero-kicker">A place to pray, grow, and serve</p>
           <h1 id="home-title">Arise &amp; Shine</h1>
-          <p className="hero-ministry">Ministries</p>
+          <p className="hero-ministry">Ministries Since 2009</p>
           <p className="hero-tagline">Praying Together <span>•</span> Growing Together <span>•</span> For His Glory</p>
           <blockquote className="hero-verse">
             “Arise, shine, for your light has come,<br className="desktop-break" /> and the glory of the Lord rises upon you.”
